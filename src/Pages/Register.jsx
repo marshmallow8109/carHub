@@ -33,13 +33,16 @@ const Register = () => {
     const body = { userName, email, password };
 
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(body),
-      });
+      const response = await fetch(
+        `https://carhub.cyclic.app/api/v1/register`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        }
+      );
 
       const data = await response.json();
       console.log(response);

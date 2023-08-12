@@ -55,7 +55,7 @@ const Profile = () => {
     const body = { userName: userName, email: userEmail, _id };
 
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/update`, {
+      const response = await fetch(`https://carhub.cyclic.app/api/v1/update`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
