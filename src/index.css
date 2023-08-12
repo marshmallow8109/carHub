@@ -1,0 +1,106 @@
+:root {
+  scroll-behavior: smooth;
+}
+.underline {
+  margin: 0 auto;
+  width: 5rem;
+  height: 5px;
+  background-color: #99eefd;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: clamp(1rem, 2rem, 4rem);
+}
+
+.pro {
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-Image {
+  width: 9.9rem;
+  height: 9.9rem;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #00d5fa;
+  right: 8%;
+  top: 0%;
+  background: transparent;
+  object-fit: cover;
+  object-position: center;
+}
+.Edith {
+  position: absolute;
+  left: 60%;
+  top: 100%;
+}
+
+.edith-profile {
+  height: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.show-edith-profile {
+  height: 9rem;
+}
+
+.zindex {
+  z-index: 1;
+}
+
+/* scrolle */
+.scrol-text-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.scrol-text-container .scroll {
+  width: 100%;
+  display: flex;
+}
+
+.scroll div > .tp {
+  color: gray;
+  text-transform: lowercase;
+  white-space: nowrap;
+  font-weight: 500;
+  animation: animate 80s linear infinite;
+}
+
+.scroll div > .tp:hover {
+  animation-play-state: paused;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* s2 */
+.sliding-text-container {
+  overflow: hidden;
+  width: "300px";
+  height: 3rem;
+}
+
+.sliding-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideText 40s linear infinite;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
