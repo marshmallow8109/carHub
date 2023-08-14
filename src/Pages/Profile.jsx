@@ -47,7 +47,7 @@ const Profile = () => {
   const p3 = theme.palette.text;
 
   const handleClick = async () => {
-    if (_id === "64d166ffc31510029863a66a") {
+    if (_id === "64dabc64e28db5d1924ad200") {
       setMsg("This is a demo account, create your own account to edith");
       ClearText();
       return;
