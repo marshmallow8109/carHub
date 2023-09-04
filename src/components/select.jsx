@@ -37,14 +37,19 @@ const Select = () => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Box mt={"2rem"}>
+      <Box
+        mt={"2rem"}
+        width={isNonMobileScreens ? "800px" : "80%"}
+        margin={"0 auto"}
+        padding={"0.5rem"}
+      >
         <Typography variant="h4" color={p1} textAlign={"center"}>
           Book a car now
         </Typography>
         <div className="underline"></div>
         <Box
           display={"flex"}
-          justifyContent={"center"}
+          justifyContent={"start"}
           alignItems={"center"}
           gap={"1rem"}
           flexWrap={"wrap"}
@@ -129,14 +134,15 @@ const Select = () => {
 
         <Box
           display={"flex"}
-          justifyContent={"center"}
+          justifyContent={"start"}
           alignItems={"center"}
           gap={"1rem"}
           flexWrap={"wrap"}
-          mt={"1rem"}
+          mt={"1.5rem"}
           mb={"2rem"}
         >
           <DatePicker
+            sx={{ width: isNonMobileScreens ? "250px" : "80vw" }}
             value={date}
             onChange={(newValue) => setDate(newValue)}
             label={"Select Date"}

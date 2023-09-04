@@ -14,9 +14,9 @@ const Guide = () => {
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection={"column"}
-        width={!isNonMobileScreens ? "100%" : "500px"}
+        width={!isNonMobileScreens ? "90%" : "500px"}
         margin={"0 auto"}
-        marginTop={"6rem"}
+        marginTop={"1rem"}
       >
         <Typography variant="h6">Plan your trip now with our</Typography>
         <Typography mb={"2rem"} variant="h4" color={p2} textAlign={"center"}>

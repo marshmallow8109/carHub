@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const init = {
-  mode: "dark",
+  mode: "light",
   data: null,
 };
 

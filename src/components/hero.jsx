@@ -29,16 +29,7 @@ const Hero = () => {
         flexWrap={"wrap"}
         gap={"2rem"}
       >
-        <Box
-          width={!isNonMobileScreens ? "100%" : "40%"}
-          padding={"1rem"}
-          sx={{
-            "&:hover": {
-              border: `1px solid ${hover}`,
-              borderRadius: "10px",
-            },
-          }}
-        >
+        <Box width={!isNonMobileScreens ? "100%" : "40%"} padding={"1rem"}>
           <Typography
             variant="h4"
             className="heading"
