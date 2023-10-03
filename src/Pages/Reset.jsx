@@ -9,12 +9,17 @@ import {
 } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 const Reset = () => {
+  //state
   const navigate = useNavigate();
   const theme = useTheme();
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
+
+  //data
+  const token = useSelector((state) => state.data?.token);
 
   const isNonMobileScreens = useMediaQuery("(min-width: 800px)");
   const background = theme.palette.background.alt;
@@ -25,15 +30,24 @@ const Reset = () => {
       clearError();
       return;
     }
+    const body = { email: email };
 
     try {
-      const response = await fetch(``, { method: "GET" });
+      const response = await fetch(``, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(body),
+      });
       const data = await response.json();
       if (!response.status === 200) {
         setMsg(`No user Found!`);
         clearError();
       } else {
         //msg check your email
+
         navigate("/login");
       }
     } catch (error) {

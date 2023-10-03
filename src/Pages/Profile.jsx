@@ -138,7 +138,7 @@ const Profile = () => {
         >
           <Card
             sx={{
-              width: `${!isNonMobileScreens ? "95%" : "900px"}`,
+              width: `${!isNonMobileScreens ? "95vw" : "780px"}`,
             }}
           >
             <CardMedia component="img" height={"140"} src={Black} />
